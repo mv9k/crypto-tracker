@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import './App.css';
 
+import Home from './components/home.js';
+
 const { Header, Content, Footer } = Layout;
 
 class App extends Component {
@@ -15,7 +17,7 @@ class App extends Component {
                   <Menu
                       theme="dark"
                       mode="horizontal"
-                      defaultSelectedKeys={['2']}
+                      defaultSelectedKeys={['1']}
                       style={{ lineHeight: '64px' }}
                   >
                       <Menu.Item key="1">nav 1</Menu.Item>
@@ -29,10 +31,13 @@ class App extends Component {
                       <Breadcrumb.Item>List</Breadcrumb.Item>
                       <Breadcrumb.Item>App</Breadcrumb.Item>
                   </Breadcrumb>
-                  <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
+                  <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+                    Content
+                    <Home />
+                  </div>
               </Content>
               <Footer style={{ textAlign: 'center' }}>
-                  Crypto Tracker ©2018 Created by Kris W.
+                  Footer
               </Footer>
           </Layout>
       </div>
